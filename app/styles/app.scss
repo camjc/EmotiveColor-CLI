@@ -1,17 +1,18 @@
+@import "normalize";
 
 
 /* ==========================================================================
    Globals
    ========================================================================== */
 
-html{
+html {
 	color: #444;
 	text-transform: lowercase;
-	background-color: #D1D1D1;
+	background-color: #d1d1d1;
 	font-feature-settings: 'kern' 1;
 }
 
-.bg-color{
+.bg-color {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -22,17 +23,14 @@ html{
 	transition: background-color 0.25s ease-in-out;
 }
 
-body{
-	overflow-y: scroll; /*Stops width of window changing*/
+body {
+	overflow-y: scroll; // Stops width of window changing
 	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 	font-weight: 300;
 }
 
 ::selection {
-	background: #fff; /* Safari */
-}
-::-moz-selection {
-	background: #fff; /* Firefox */
+	background: #fff;
 }
 
 a {
@@ -41,198 +39,195 @@ a {
 	text-decoration: none;
 }
 
-a:hover{
+a:hover {
 	text-decoration: underline;
 }
 
-h1{
+h1 {
 	margin-top: 0;
 	margin-bottom: 1em;
 	line-height: 1.5;
 }
 
-p{
+p {
 	font-size: 1.125em;
 	line-height: 1.5em;
 }
 
-li{
+li {
 	line-height: 2;
 }
 
-th, td{
+th, td {
 	padding: 1em;
 	font-size: 1em;
 	line-height: 1;
 	text-align: left;
 }
 
-td a{
+td a {
 	display: block;
 }
 
-header{
-	color: #FFF;
+header {
+	color: #fff;
 	text-transform: lowercase;
-	background-color: #AAA;
+	background-color: #aaa;
 	background-color: rgba(#a0a0a0, .8);
-	border-bottom: 2px solid #FFF;
+	border-bottom: 2px solid #fff;
 }
 
-table{
+table {
 	width: 100%;
 }
 
-// /*
-//    Utilities
-//    ========================================================================== */
-//
-// .clear{
-// 	clear: both;
-// }
-//
-// .textcenter{
-// 	text-align: center;
-// }
-//
-// .blockcenter{
-// 	display: block;
-// 	margin: auto;
-// 	text-align: center;
-// }
-//
-// .hide{
-//   position: absolute;
-//   top: -9999px;
-//   left: -9999px;
-// }
-//
-// .container{
-// 	max-width: 1280px;
-// 	padding: 0 2em;
-// 	margin: auto;
-// }
-//
-// .list-left{
-// 	padding: 0;
-// }
-//
-// .list-nostyle{
-// 	list-style: none;
-// }
-//
-// .normalcase{
-// 	text-transform: none;
-// }
-//
-// .text-large{
-// 	@media(min-width: 44em){
-// 		font-size: 2em;
-// 	}
-// }
-//
-// .pull-right{
-// 	display: block;
-// 	float: right;
-// }
-//
-// /* ==========================================================================
-//    Button Module
-//    ========================================================================== */
-//
-// .btn, button{
-// 	padding: .5em 2em;
-// 	font-weight: 300; /* User Agent overrides to normal on button */
-// 	color: #FFF;
-// 	text-decoration: none;
-// 	text-transform: lowercase; /* User Agent overrides to normal on button */
-// 	cursor: pointer;
-// 	background-color: #AAA;
-// 	border: 2px solid #FFF;
-// 	box-sizing: border-box;
-// 	appearance: none;
-// 	user-select: none;
-// 	-webkit-appearance: none;
-// 	-moz-appearance: none;
-// 	-webkit-user-select: none;
-// 	-moz-user-select: none;
-// 	-ms-user-select: none;
-// }
-//
-// .btn:hover, button:hover{
-// 	text-decoration: none;
-// 	background-color: #888;
-// }
-//
-// .btn:active, button:active{
-// 	background-color: #555;
-// }
-//
-// .btn.blockcenter{ /*Center button should not be full width*/
-// 	width: 14em;
-// }
-//
-// .btn-fb{
-// 	$Cfb: #4c66a4;
-// 	background-color: $Cfb;
-// 	&:hover{
-// 		background-color: darken($Cfb, 13);
-// 	}
-// 	&:active{
-// 		background-color: darken($Cfb, 33);
-// 	}
-// }
-//
-// .btn-cta{
-// 	$Ccta: #95c2e7;
-// 	background-color: transparent;
-// 	@media (min-width: 21em){
-// 		font-size: 1.5em;
-// 	}
-// 	&:hover{
-// 		background-color: darken($Ccta, 13);
-// 	}
-// 	&:active{
-// 		background-color: darken($Ccta, 33);
-// 	}
-// }
-//
-// /* ==========================================================================
-//    Alert Box Module
-//    ========================================================================== */
-//
-// .alert-box{
-// 	padding: 1em 0;
-// 	line-height: 1em;
-// 	color: #fff;
-// 	cursor: pointer;
-// 	background-color: #888;
-// 	background-color: rgba(#777,.8);
-// 	border-bottom: 2px solid #F5F5F5;
-// }
-//
-// .alerts-view{
-// 	min-height: 3.5em;
-// }
-//
-// .ico-close{
-// 	float: right;
-// }
-//
-// /* ==========================================================================
-//    Modal Module
-//    ========================================================================== */
-//
-// .modal{
-// 	position: absolute;
-// 	top: 50px;
-// 	right: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	background-color: rgba(255, 255, 255, 0.5);
-// }
-//
-// /*.modal-close{
+/*
+   Utilities
+   ========================================================================== */
+
+.clear {
+	clear: both;
+}
+
+.textcenter {
+	text-align: center;
+}
+
+.blockcenter {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.hide {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.container {
+	max-width: 1280px;
+	padding: 0 2em;
+	margin: auto;
+}
+
+.list-left {
+	padding: 0;
+}
+
+.list-nostyle {
+	list-style: none;
+}
+
+.normalcase {
+	text-transform: none;
+}
+
+.text-large {
+	@media(min-width: 44em) {
+		font-size: 2em;
+	}
+}
+
+.pull-right {
+	display: block;
+	float: right;
+}
+
+/* ==========================================================================
+   Button Module
+   ========================================================================== */
+
+.btn, button {
+	padding: .5em 2em;
+	font-weight: 300; // User Agent overrides to normal on button
+	color: #fff;
+	text-decoration: none;
+	text-transform: lowercase; // User Agent overrides to normal on button
+	cursor: pointer;
+	background-color: #aaa;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	user-select: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.btn:hover, button:hover {
+	text-decoration: none;
+	background-color: #888;
+}
+
+.btn:active, button:active {
+	background-color: #555;
+}
+
+.btn.blockcenter { // Center button should not be full width
+	width: 14em;
+}
+
+.btn-fb {
+	$color-facebook: #4c66a4;
+	background-color: $color-facebook;
+	&:hover {
+		background-color: darken($color-facebook, 13);
+	}
+	&:active {
+		background-color: darken($color-facebook, 33);
+	}
+}
+
+.btn-cta {
+	$color-action: #95c2e7;
+	background-color: transparent;
+	@media (min-width: 21em) {
+		font-size: 1.5em;
+	}
+	&:hover {
+		background-color: darken($color-action, 13);
+	}
+	&:active {
+		background-color: darken($color-action, 33);
+	}
+}
+
+/* ==========================================================================
+   Alert Box Module
+   ========================================================================== */
+
+.alert-box {
+	padding: 1em 0;
+	line-height: 1em;
+	color: #fff;
+	cursor: pointer;
+	background-color: #888;
+	background-color: rgba(#777,.8);
+	border-bottom: 2px solid #F5F5F5;
+}
+
+.alerts-view {
+	min-height: 3.5em;
+}
+
+.ico-close {
+	float: right;
+}
+
+/* ==========================================================================
+   Modal Module
+   ========================================================================== */
+
+.modal {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(#fff, 0.5);
+}
+
+// .modal-close {
 // 	position: absolute;
 // 	top: 0;
 // 	right: 0;
@@ -241,72 +236,68 @@ table{
 // 	color: white;
 // 	text-align: center;
 // 	cursor: pointer;
-// 	background-color: #AAA;
+// 	background-color: #aaa;
 // 	border: 2px solid white;
 // 	border-radius: 50%;
 // 	user-select: none;
-// 	-webkit-user-select: none;
-// 	-moz-user-select: none;
-// 	-ms-user-select: none;
 // }
-// .modal-close:hover{
+// .modal-close:hover {
 // 	background-color: #888;
-// }*/
-//
-// /* ==========================================================================
-//    Input Controls Module
-//    ========================================================================== */
-//
-// .controls{
-// 	display: block;
-// 	width: 30em;
-// 	max-width: 100%;
-// 	max-height: 80%;
-// 	margin: 2em auto;
-// 	@media (min-height: 52em){
-// 		margin: 7em auto;
-// 	}
 // }
-//
-// .controls-control:hover{
-// 	cursor: pointer;
-// }
-//
-// .controls-control .background{
-// 	fill: #aaa;
-// }
-//
-// .controls-control:hover .background{
-// 	fill: #888;
-// }
-// .controls-control:active .background{
-// 	fill: #555;
-// }
-//
-// /* ==========================================================================
-//    Visualizer Module
-//    ========================================================================== */
-//
-// canvas{
-// 	position: absolute;
-// 	bottom: 0;
-// 	z-index: -1;
-// 	transition: filter .1s ease-in-out; /* Future Standard? */
-// /*	width: 100%;*/
-// 	cursor: move;
-// 	-webkit-transition: -webkit-filter .1s ease-in-out;
-// }
-//
-// canvas.blur{
-// 	filter: blur(5px); /* Future Standard? */
-// 	-webkit-filter: blur(5px);
-// }
-//
+
+/* ==========================================================================
+   Input Controls Module
+   ========================================================================== */
+
+.controls {
+	display: block;
+	width: 30em;
+	max-width: 100%;
+	max-height: 80%;
+	margin: 2em auto;
+	@media (min-height: 52em) {
+		margin: 7em auto;
+	}
+}
+
+.controls-control:hover {
+	cursor: pointer;
+}
+
+.controls-control .background {
+	fill: #aaa;
+}
+
+.controls-control:hover .background {
+	fill: #888;
+}
+
+.controls-control:active .background {
+	fill: #555;
+}
+
+/* ==========================================================================
+   Visualizer Module
+   ========================================================================== */
+
+canvas {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+	// width: 100%;
+	cursor: move;
+	transition: filter .1s ease-in-out;
+}
+
+canvas.blur {
+	filter: blur(5px);
+}
+
 // // // /* ==========================================================================
 // // //    Facebook Module
 // // //    ========================================================================== */
 //
-// // // .ico-fb{
+// // // .ico-fb {
 // // // 	border-radius: 50%;
 // // // }
 //
@@ -314,16 +305,16 @@ table{
 // //    Media Module
 // //    ========================================================================== */
 //
-// // .media-block{
+// // .media-block {
 // // 	min-height: 20em;
 // // 	margin: 2em 0;
 // // 	float: left;
 // // 	width: 50%;
 // // 	display: table;
-// // 	img{
+// // 	img {
 // // 		box-shadow: 0 0 0 2px white;
 // // 	}
-// // 	h1, p{
+// // 	h1, p {
 // // 		display: table-cell;
 // // 		text-align: center;
 // // 		vertical-align: middle;
@@ -331,7 +322,7 @@ table{
 // // 	}
 // // }
 //
-// // .media-full{
+// // .media-full {
 // // 	width: 100%;
 // // }
 //
@@ -340,8 +331,8 @@ table{
 //    Login Module
 //    ========================================================================== */
 //
-// @media (min-width: 44em){
-// 	.login{
+// @media (min-width: 44em) {
+// 	.login {
 // 		@include span-columns(6, 12);
 // 		@include prefix(3);
 // 		margin-top: 18em;
@@ -351,118 +342,118 @@ table{
 // 		}
 // 	}
 // }
-//
-// /* ==========================================================================
-//    About Module
-//    ========================================================================== */
-//
-// .about-jumbotron{
-// 	position: relative;
-// 	margin-bottom: 8em;
-// 	color: white;
-// }
-//
-// .about-title{
-// 	@include user-select(none);
-// 	display: block;
-// 	width: 100%;
-// 	margin-top: .5em;
-// 	margin-bottom: 0;
-// 	font-size: 2.4em;
-// 	font-weight: 100;
-// 	line-height: .8;
-// 	text-align: right;
-// 	cursor: default;
-// 	// @media(min-width: 41em){
-// 	// 	font-size: 5.9em;
-// 	// }
-// 	// @media(min-width: 82em){
-// 	// 	margin-bottom: .5em;
-// 	// 	font-size: 12.5em;
-// 	// }
-// }
-//
-// #fittext{
-// 	white-space: nowrap;
-// }
-//
-// .about-credits{
-// 	margin-top: 0;
-// 	font-weight: 100;
-// 	text-align: right;
-// }
-//
-// .about-item{
-// 	@media(min-width: 45em) and (max-width: 84em){
+
+/* ==========================================================================
+   About Module
+   ========================================================================== */
+
+.about-jumbotron {
+	position: relative;
+	margin-bottom: 8em;
+	color: white;
+}
+
+.about-title {
+	display: block;
+	width: 100%;
+	margin-top: .5em;
+	margin-bottom: 0;
+	font-size: 2.4em;
+	font-weight: 100;
+	line-height: .8;
+	text-align: right;
+	cursor: default;
+	user-select: none;
+	// @media(min-width: 41em) {
+	// 	font-size: 5.9em;
+	// }
+	// @media(min-width: 82em) {
+	// 	margin-bottom: .5em;
+	// 	font-size: 12.5em;
+	// }
+}
+
+#fittext {
+	white-space: nowrap;
+}
+
+.about-credits {
+	margin-top: 0;
+	font-weight: 100;
+	text-align: right;
+}
+
+// .about-item {
+// 	@media(min-width: 45em) and (max-width: 84em) {
 // 		@include span-columns(6,12);
 // 		@include nth-omega(2n);
 // 	}
-// 	@media(min-width: 84em){
+// 	@media(min-width: 84em) {
 // 		@include span-columns(4,12);
 // 		@include nth-omega(3n);
 // 	}
-// 	p,img{
+// 	p,img {
 // 		display: block;
 // 		width: 100%;
 // 		margin: 0 auto 1em;
 // 	}
 // }
 //
-// .about-cta{
+// .about-cta {
 // 	@include omega;
 // 	margin-top: 2em;
 // 	margin-bottom: 2em;
 // }
 //
-// .about-bg{
-// 	@include background-image(linear-gradient(-45deg, #95c2e7, #ac76c8));
-// 	position: absolute;
-// 	top: 0;
-// 	right: 0;
-// 	left: 0;
-// 	z-index: -1;
-// 	min-height: 100%;
-// 	padding-top: 6em;
-// }
+.about-bg {
+	background-image: linear-gradient(-45deg, #95c2e7, #ac76c8);
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+	min-height: 100%;
+	padding-top: 6em;
+}
 //
-// .about-tech-text{
+// .about-tech-text {
 // 	@include span-columns(1,1);
 // 	padding-bottom: .5em;
 // }
 //
-// .about-logo{
-// 	@media(max-width:26em){
+// .about-logo {
+// 	@media(max-width:26em) {
 // 		@include span-columns(1,2);
 // 		@include nth-omega(2n);
 // 	}
-// 	@media(min-width: 26em) and (max-width:68em){
+// 	@media(min-width: 26em) and (max-width:68em) {
 // 		@include span-columns(1,4);
 // 		@include nth-omega(4n);
 // 	}
-// 	@media(min-width:68em){
+// 	@media(min-width:68em) {
 // 		@include span-columns(1,8);
 // 		@include nth-omega(8n);
 // 	}
-// 	img{
+// 	img {
 // 		@include transition(.1s top ease-in-out);
 // 		position: relative;
 // 		display: block;
 // 		width: 100%;
 // 		margin-bottom: 2em;
 // 	}
-// 	&:hover img{
+// 	&:hover img {
 // 		top: -.5em;
 // 	}
 // }
 //
-// // .about-logo-frontend{
+// // .about-logo-frontend {
 // // 	@include span-columns(2,10);
 // // 	@include nth-omega(5n);
 // // }
 //
-// // .about-logo-backend{
+// // .about-logo-backend {
 // // 	@include span-columns(2,10);
-// // 	&:first-child{
+// // 	&:first-child {
 // // 		@include prefix(1);
 // // 	}
 // // }
