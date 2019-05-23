@@ -26,7 +26,7 @@
     "body-parser": "^1.2.0",
     "glob": "^3.2.9",
     "broccoli-sass": "~0.1.4",
-    "broccoli-coffee": "~0.1.0",
+    "broccoli-coffee": "~1.0.1",
     "broccoli-autoprefixer": "~0.2.0"
   },
   "dependencies": {
